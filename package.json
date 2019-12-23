@@ -1,0 +1,26 @@
+{
+  "name": "gbook-plugin-search",
+  "description": "GBook的页面搜索插件",
+  "main": "index.js",
+  "version": "1.0.0",
+  "engines": {
+    "gbook": ">=1.0.0-pre.0"
+  },
+  "dependencies": {},
+  "homepage": "https://github.com/54dxs/gbook-plugin-search",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/54dxs/gbook-plugin-search.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/54dxs/gbook-plugin-search/issues"
+  },
+  "devDependencies": {
+    "eslint": "^2.7.0",
+    "less": "2.5.1"
+  },
+  "scripts": {
+    "-prepublish": "lessc ./less/search.less > ./assets/search.css"
+  }
+}

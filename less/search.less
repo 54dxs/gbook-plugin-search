@@ -1,0 +1,56 @@
+@search-padding-default:              1.5rem;
+@search-results-opacity:              0.95;
+@search-highlight-color:              rgba(255, 220, 0, 0.4);
+
+/*
+    This CSS only styled the search results section, not the search input
+    It defines the basic interraction to hide content when displaying results, etc
+*/
+
+#book-search-results {
+    .search-results {
+        display: none;
+
+        ul.search-results-list {
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+                margin-bottom: @search-padding-default;
+                padding-bottom: @search-padding-default/3;
+
+                /* Highlight results */
+                p em {
+                    background-color: @search-highlight-color;
+                    font-style: normal;
+                }
+            }
+        }
+
+        .no-results {
+            display: none;
+        }
+    }
+
+    &.open {
+        .search-results {
+            display: block;
+        }
+
+        .search-noresults {
+            display: none;
+        }
+    }
+
+    &.no-results {
+        .search-results {
+            .has-results {
+                display: none;
+            }
+
+            .no-results {
+                display: block;
+            }
+        }
+    }
+}
